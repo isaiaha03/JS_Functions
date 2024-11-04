@@ -98,3 +98,36 @@ function triangleType(a, b, c)
     }
 }
 
+// Exercise 5 Section
+console.log("EXERCISE 5:\n==========\n");
+
+function dataUsageFeedback(planLimit, day, usage)
+{
+    const period = 30;
+    const dailyAverageLimit = planLimit / period;
+    const averageUsage = usage / day;
+    const remainingDays = period - day;
+    const remainingData = planLimit - usage;
+    const suggestedDailyUsage = remainingData / remainingDays;
+
+    console.log(`${day} days used, ${remainingDays} days remaining.`);
+    console.log(`Average daily use: ${averageUsage} GB/day.`);
+
+    if (averageUsage > dailyAverageLimit)
+    {
+        const overage = (averageUsage * period) - planLimit
+        console.log(`You are EXCEEDING your average daily use (${averageUsage} GB/day).`)
+        console.log(`If you continue this high usage, you'll exceed your data plan by ${overage} GB.`)
+        console.log(`To stay below your data plan, use no more than ${suggestedDailyUsage} GB/day.`);
+    }
+    else if (averageUsage < dailyAverageLimit)
+    {
+        console.log(`You are UNDER your average daily use (${averageUsage} GB/day).`)
+        console.log(`You can use up to ${suggestedDailyUsage} GB/day for the rest of the period.`);
+    }
+    else
+    {
+        console.log(`You are ON TRACK with your average daily use.`);
+        console.log(`Continue using around ${suggestedDailyUsage} GB/day to stay within your plan.`);
+    }
+}
