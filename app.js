@@ -82,19 +82,19 @@ function triangleType(a, b, c)
 {
     if (a + b <= c || a + c <= b || b + c <= a)
     {
-        return "Not a valid triangle: The sum of any two sides must be greater than the third."
+        console.log("Not a valid triangle: The sum of any two sides must be greater than the third.");
     }
     if (a == b && b == c)
     {
-        return "Equilateral triangle: All sides are equal.";
+        console.log("Equilateral triangle: All sides are equal.");
     }
     else if (a == b || a == c || b == c)
     {
-        return "Isosceles triangle: Two sides are equal.";
+        console.log("Isosceles triangle: Two sides are equal.");
     }
     else
     {
-        return "Scalene triangle: All sides are different.";
+        console.log("Scalene triangle: All sides are different.");
     }
 }
 
