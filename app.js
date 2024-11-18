@@ -22,6 +22,8 @@ function printOdds(count)
     }
 }
 
+printOdds(15)
+
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
@@ -39,6 +41,8 @@ function checkAge(userName, age)
         console.log(aboveSixteen);
     }
 }
+
+checkAge("person", 15)
 
 // Exercise 3 Section
 console.log("EXERCISE 3:\n==========\n");
@@ -75,6 +79,8 @@ function whichQuadrant(x, y)
     }
 }
 
+whichQuadrant(5, 5)
+
 // Exercise 4 Section
 console.log("EXERCISE 4:\n==========\n");
 
@@ -97,6 +103,8 @@ function triangleType(a, b, c)
         console.log("Scalene triangle: All sides are different.");
     }
 }
+
+triangleType(5, 5, 5)
 
 // Exercise 5 Section
 console.log("EXERCISE 5:\n==========\n");
@@ -131,3 +139,5 @@ function dataUsageFeedback(planLimit, day, usage)
         console.log(`Continue using around ${suggestedDailyUsage} GB/day to stay within your plan.`);
     }
 }
+
+dataUsageFeedback(15, 5, 5)
